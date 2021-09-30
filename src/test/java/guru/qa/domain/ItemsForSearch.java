@@ -4,7 +4,8 @@ public enum ItemsForSearch {
     JACKET("куртка"),
     PAGAMAS("пижама"),
     CAP("шапка"),
-    SHOES("туфли");
+    BOOTS("сапоги"),
+    COAT("пальто");
 
     private final String description;
 

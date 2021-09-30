@@ -25,7 +25,7 @@ public class ParametrizedTests {
             "куртка",
             "пижама",
             "шапка",
-            "туфли"
+            "сапоги"
     })
     @ParameterizedTest(name = "Search with ValueSource: {0}")
     void searchByValueSource(String value) {
@@ -38,7 +38,7 @@ public class ParametrizedTests {
             "куртка; зимняя",
             "пижама; детская",
             "шапка; бини",
-            "туфли; женские"
+            "сапоги; женские"
     }, delimiter = ';')
     @ParameterizedTest(name = "Search with CsvSource: {0}, {1}")
     void searchByCsvSource(String item, String property) {
@@ -56,7 +56,7 @@ public class ParametrizedTests {
     }
 
     static Stream<String> stringProvider() {
-        return Stream.of("куртка зимняя", "пижама детская", "шапка бини", "туфли женские");
+        return Stream.of("куртка зимняя", "пижама детская", "шапка бини", "сапоги женские");
     }
 
     @MethodSource("stringProvider")
