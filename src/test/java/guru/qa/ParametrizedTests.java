@@ -47,7 +47,10 @@ public class ParametrizedTests {
                 .checkResult(item);
     }
 
-    @EnumSource(ItemsForSearch.class)
+    @EnumSource(value = ItemsForSearch.class,
+            mode = EnumSource.Mode.EXCLUDE,
+            names = {"SHOES"}
+    )
     @ParameterizedTest(name = "search with EnumSource: {0}")
     void searchByEnumSource(ItemsForSearch items) {
         wildberriesPage.openPage()
